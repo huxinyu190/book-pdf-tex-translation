@@ -1,1 +1,32 @@
+% !TEX program = xelatex
+% ============================================================
+%  main.tex —— 书籍中译主文件骨架（配合 book-zh.cls 使用）
+%
+%  用法：
+%    1. 复制本文件到译文目录（如 <书名>_zh\test_zh.tex）
+%    2. 将 book-zh.cls 复制到同目录（可按目标书版式微调）
+%    3. 修改下方「书名/作者/编译说明」注释头
+%    4. 如有原书封面扫描件 cover.pdf，保留 \includepdf；否则删去该行
+%    5. 每章翻译完成后，用 assemble.py 把片段拼到 \end{document} 之前
+%
+%  编译：xelatex，连跑 3 遍（目录 .toc 与交叉引用需要多遍收敛）
+% ============================================================
+\documentclass{book-zh}
 
+\begin{document}
+
+% 原书封面（如有扫描件，整页导入）
+\includepdf[pages=-,keepaspectratio]{cover.pdf}
+
+\frontmatter
+\tableofcontents
+\mainmatter
+
+% ------------------------------------------------------------
+% 第 1 章
+% ------------------------------------------------------------
+\chapter{（第一章标题）}
+
+（正文……）
+
+\end{document}
